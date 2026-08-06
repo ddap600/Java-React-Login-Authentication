@@ -2,6 +2,8 @@ package com.java_learning.authentication_backend.controller;
 
 import com.java_learning.authentication_backend.dto.CreateUserRequestDto;
 import com.java_learning.authentication_backend.dto.CreateUserResponseDto;
+import com.java_learning.authentication_backend.dto.UserLoginRequestDto;
+import com.java_learning.authentication_backend.dto.UserLoginResponseDto;
 import com.java_learning.authentication_backend.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,4 +23,12 @@ public class UserController {
         CreateUserResponseDto response = userService.createUser(createUserRequestDto);
         return ResponseEntity.ok(response);
     }
+
+    // Login User
+    @PostMapping("/login")
+    public ResponseEntity<UserLoginResponseDto> loginUser(@RequestBody UserLoginRequestDto userLoginRequestDto) {
+        UserLoginResponseDto response = userService.loginUser(userLoginRequestDto);
+        return ResponseEntity.ok(response);
+    }
+
 }
