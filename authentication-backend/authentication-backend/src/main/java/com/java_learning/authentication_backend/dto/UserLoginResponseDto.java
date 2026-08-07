@@ -12,5 +12,5 @@ import lombok.Setter;
 public class UserLoginResponseDto {
 
     private boolean success;
-    private String message;
+    private String token;
 }
