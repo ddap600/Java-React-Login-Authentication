@@ -10,8 +10,14 @@ MySQL Driver
 Spring Security
 Lombok
 
-Also added: 
-H2 dependency and H2 Console dependency.
-H2 was going to be used for development, but the switch was made to MySQL early on.
+Added later:
+H2 Database
+H2 Console
 
+JWT API
+JWT Impl
+JWT Jackson
+
+The database was changed to use MySQL in the beginning stages.
 The config for H2 is still present, but commented out.
+
