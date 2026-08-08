@@ -33,12 +33,26 @@ public class DataInitializer {
                 Role adminRole = roleRepository.findByName("ADMIN").get();
 
                 User admin = new User();
-                admin.setDisplayName("Admin");
+                admin.setDisplayName("Regular Everyday Normal Admin");
                 admin.setUsername("admin");
                 admin.setPassword(passwordEncoder.encode("password"));
                 admin.getRoles().add(adminRole);
 
                 userRepository.save(admin);
+
+            }
+
+            if (!userRepository.existsByUsername("user")) {
+
+                Role userRole = roleRepository.findByName("USER").get();
+
+                User user = new User();
+                user.setDisplayName("Regular Everyday Normal User");
+                user.setUsername("user");
+                user.setPassword(passwordEncoder.encode("password"));
+                user.getRoles().add(userRole);
+
+                userRepository.save(user);
 
             }
         };
