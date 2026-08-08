@@ -42,11 +42,14 @@ public class SecurityConfig {
         // Before any of this
         // Check if this request has a JWT
 
+
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/user").permitAll()
                         .requestMatchers("/api/auth/login").permitAll()
+                        .requestMatchers("/test/login-authentication-test").authenticated()
+                        .requestMatchers("/test/login-admin-test").hasAuthority("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(
