@@ -1,3 +1,24 @@
+##About
+
+This is a small Spring application, created to play around with some of the Spring Security features.
+
+Currently, when booted up, it will create two roles, ADMIN and USER, and one user for each.
+
+It has endpoints to test the login for each of these, that will return a token.
+
+That token can be used on the auth test endpoints to test authentication and role based logins.
+
+##Installation
+
+If  you are cloning you will also need to setup a MySQL database or any other database connection of your choosing.
+
+If  you are using IntelliJ, open this project by selecting pom.xml. This should ensure that IntelliJ treats this is as a Maven project.
+
+Lombok will also require you to enable annotation processing.
+Also make sure Lombok plugin installed and enabled.
+
+Since it's a Maven project, 'mvn clean install' is a useful command.
+
 ##Backend
 
 Java / Spring
