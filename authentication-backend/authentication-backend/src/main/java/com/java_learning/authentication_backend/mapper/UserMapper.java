@@ -2,6 +2,7 @@ package com.java_learning.authentication_backend.mapper;
 
 import com.java_learning.authentication_backend.dto.CreateUserRequestDto;
 import com.java_learning.authentication_backend.dto.CreateUserResponseDto;
+import com.java_learning.authentication_backend.dto.UserDetailsResponseDto;
 import com.java_learning.authentication_backend.dto.UserDto;
 import com.java_learning.authentication_backend.entity.User;
 
@@ -55,6 +56,13 @@ public class UserMapper {
         return new CreateUserResponseDto(
                 user.getDisplayName(),
                 user.getUsername()
+        );
+    }
+
+    public static UserDetailsResponseDto mapUserToUSerDetailsResponseDto(User user) {
+        return new UserDetailsResponseDto(
+                user.getId(),
+                user.getDisplayName()
         );
     }
 
