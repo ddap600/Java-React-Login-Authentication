@@ -8,6 +8,10 @@ It has endpoints to test the login for each of these, that will return a token.
 
 That token can be used on the auth test endpoints to test authentication and role based logins.
 
+##TODO
+
+The frontend...
+
 ##Installation
 
 If  you are cloning you will also need to setup a MySQL database or any other database connection of your choosing.
